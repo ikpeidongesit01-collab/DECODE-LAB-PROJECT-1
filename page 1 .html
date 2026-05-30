@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the foundations of visual architecture, semantic DOM structures, DRY CSS design, and web accessibility standards.">
+    <link rel="stylesheet" href="style.css">
+    <title>FOUNDATIONS OF VISUAL ARCHITECTURE & TECHNICAL INTEGRITY</title>
+</head>
+<body>
+    <div class="page-container">
+        
+        <!-- ==========================================================================
+             HEADER COMPONENT (HEADER_NAV_01)
+             ========================================================================== -->
+        <header class="header">
+            <div class="content-wrapper header__container">
+                <div class="header__logo">
+                    <a href="page 1.html" class="header__logo-link" id="header-logo">
+                        <span class="header__logo-icon">▲</span> DECODELABS
+                    </a>
+                </div>
+                
+                <!-- Hamburger Toggle Menu Button (only visible in mobile sizes 320px-425px) -->
+                <button class="header__toggle" id="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+
+                <nav class="header__nav" id="header-nav" aria-label="Main Navigation">
+                    <!-- Close button in slide mobile panel menu -->
+                    <button class="header__close" id="menu-close" aria-label="Close Navigation">&times;</button>
+                    
+                    <ul class="header__menu">
+                        <li><a href="page 1.html" class="header__link header__link--active" id="nav-home">HOME</a></li>
+                        <li><a href="page 2.html" class="header__link" id="nav-navacs">NAVACS</a></li>
+                        <li><a href="page 3.html" class="header__link" id="nav-links">LINKS</a></li>
+                        <li><a href="page 3.html#contact" class="header__link" id="nav-contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Backdrop overlay for mobile menu -->
+                <div class="header__overlay" id="menu-overlay"></div>
+            </div>
+        </header>
+
+        <!-- ==========================================================================
+             HERO SECTION (hero-container)
+             ========================================================================== -->
+        <main class="main-content">
+            <section class="hero">
+                <div class="content-wrapper hero__container">
+                    <h1 class="hero__title">FOUNDATIONS OF VISUAL ARCHITECTURE &<br>TECHNICAL INTEGRITY</h1>
+                    <p class="hero__subtitle">Developing high-performance, pixel-perfect static web structures governed by semantically pristine code foundations.</p>
+                    <a href="#content-grid" class="button button--primary hero__cta" id="hero-cta-btn">CALL TO ACTION</a>
+                </div>
+            </section>
+
+            <!-- ==========================================================================
+                 CONTENT GRID (12 COLS GRID / macro layout)
+                 ========================================================================== -->
+            <article id="content-grid" class="content-grid content-wrapper">
+                
+                <!-- LEFT COLUMN: 2 Large Stacked Modules -->
+                <div class="content-grid__col content-grid__col--left">
+                    
+                    <!-- Card 1: Information Architecture -->
+                    <section class="content-card content-card--large">
+                        <div class="content-card__image-container">
+                            <!-- Custom SVG Blueprint Illustration for IA -->
+                            <svg class="content-card__svg" viewBox="0 0 400 200" aria-label="Information Architecture Sitemap Diagram">
+                                <rect width="100%" height="100%" fill="none"/>
+                                <path d="M 200 40 L 200 80 M 200 80 L 100 80 L 100 120 M 200 80 L 300 80 L 300 120 M 100 120 L 100 160 M 300 120 L 300 160" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+                                <rect x="150" y="15" width="100" height="35" rx="4" fill="#0d1222" stroke="#f97316" stroke-width="2"/>
+                                <text x="200" y="37" fill="#f8fafc" font-size="12" font-family="monospace" text-anchor="middle">ROOT</text>
+                                
+                                <rect x="50" y="110" width="100" height="35" rx="4" fill="#0d1222" stroke="#3b82f6" stroke-width="1.5"/>
+                                <text x="100" y="132" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">PAGE 1 (HOME)</text>
+                                
+                                <rect x="250" y="110" width="100" height="35" rx="4" fill="#0d1222" stroke="#3b82f6" stroke-width="1.5"/>
+                                <text x="300" y="132" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">PAGE 2 (NAVACS)</text>
+                            </svg>
+                        </div>
+                        <div class="content-card__content">
+                            <h2 class="content-card__title">1. Information Architecture</h2>
+                            <p class="content-card__text">Establishing structural integrity before writing the first line of code. Information Architecture (IA) governs how directories, files, and navigation channels are classified to ensure high usability and logical search indexing.</p>
+                        </div>
+                    </section>
+
+                    <!-- Card 2: Semantic HTML Structure -->
+                    <section class="content-card content-card--large">
+                        <div class="content-card__image-container">
+                            <!-- Custom SVG Blueprint Illustration for Semantic HTML -->
+                            <svg class="content-card__svg" viewBox="0 0 400 200" aria-label="Semantic DOM Blocks Illustration">
+                                <rect width="100%" height="100%" fill="none"/>
+                                <rect x="20" y="20" width="360" height="30" rx="4" fill="#0d1222" stroke="#3b82f6" stroke-width="1.5"/>
+                                <text x="35" y="38" fill="#3b82f6" font-size="10" font-family="monospace">&lt;header&gt;</text>
+                                
+                                <rect x="20" y="60" width="240" height="80" rx="4" fill="#0d1222" stroke="#f97316" stroke-width="1.5"/>
+                                <text x="35" y="78" fill="#f97316" font-size="10" font-family="monospace">&lt;main&gt; &rarr; &lt;article&gt;</text>
+                                
+                                <rect x="280" y="60" width="100" height="80" rx="4" fill="#0d1222" stroke="#3b82f6" stroke-width="1.5"/>
+                                <text x="295" y="78" fill="#3b82f6" font-size="10" font-family="monospace">&lt;aside&gt;</text>
+                                
+                                <rect x="20" y="150" width="360" height="30" rx="4" fill="#0d1222" stroke="#3b82f6" stroke-width="1.5"/>
+                                <text x="35" y="168" fill="#3b82f6" font-size="10" font-family="monospace">&lt;footer&gt;</text>
+                            </svg>
+                        </div>
+                        <div class="content-card__content">
+                            <h2 class="content-card__title">2. Semantic Document Object Model</h2>
+                            <p class="content-card__text">Rejecting generic "div soup" in favor of strict HTML5 semantic landmarks. By structuring files around explicit tags like &lt;header&gt;, &lt;main&gt;, &lt;aside&gt;, and &lt;footer&gt;, the DOM remains readable for search engine web spiders and accessibility tools.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- RIGHT COLUMN: 4 Grid-aligned Modules -->
+                <div class="content-grid__col content-grid__col--right">
+                    
+                    <!-- Card 3: CSS Separation of Concerns -->
+                    <section class="content-card">
+                        <div class="content-card__image-container">
+                            <svg class="content-card__svg" viewBox="0 0 200 120" aria-label="Separation of Concerns Layering">
+                                <rect width="100%" height="100%" fill="none"/>
+                                <path d="M30 80 L170 80 M30 50 L170 50 M30 20 L170 20" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2 2"/>
+                                <polygon points="30,80 100,50 170,80" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                                <polygon points="30,50 100,20 170,50" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+                                <polygon points="30,20 100,-10 170,20" fill="none" stroke="#f97316" stroke-width="1.5"/>
+                                <text x="100" y="110" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">Separated Style Layers</text>
+                            </svg>
+                        </div>
+                        <div class="content-card__content">
+                            <h3 class="content-card__title">3. Modular CSS Architecture</h3>
+                            <p class="content-card__text">Enforcing external-only stylesheets. We utilize Block-Element-Modifier (BEM) naming rules to maintain a decoupled visual and content layout.</p>
+                        </div>
+                    </section>
+
+                    <!-- Card 4: Layout Systems -->
+                    <section class="content-card">
+                        <div class="content-card__image-container">
+                            <svg class="content-card__svg" viewBox="0 0 200 120" aria-label="CSS Grid vs Flexbox Illustration">
+                                <rect width="100%" height="100%" fill="none"/>
+                                <!-- Grid layout outline -->
+                                <rect x="15" y="15" width="80" height="60" rx="3" fill="none" stroke="#3b82f6" stroke-width="1"/>
+                                <line x1="41" y1="15" x2="41" y2="75" stroke="#3b82f6" stroke-dasharray="2 2"/>
+                                <line x1="68" y1="15" x2="68" y2="75" stroke="#3b82f6" stroke-dasharray="2 2"/>
+                                <line x1="15" y1="45" x2="95" y2="45" stroke="#3b82f6" stroke-dasharray="2 2"/>
+                                <text x="55" y="90" fill="#94a3b8" font-size="8" font-family="monospace" text-anchor="middle">2D Grid Layout</text>
+                                
+                                <!-- Flexbox layout outline -->
+                                <rect x="105" y="25" width="80" height="40" rx="3" fill="none" stroke="#f97316" stroke-width="1"/>
+                                <rect x="110" y="32" width="16" height="26" rx="2" fill="none" stroke="#f97316" stroke-width="1"/>
+                                <rect x="132" y="32" width="22" height="26" rx="2" fill="none" stroke="#f97316" stroke-width="1"/>
+                                <rect x="160" y="32" width="20" height="26" rx="2" fill="none" stroke="#f97316" stroke-width="1"/>
+                                <text x="145" y="90" fill="#94a3b8" font-size="8" font-family="monospace" text-anchor="middle">1D Flex Alignment</text>
+                            </svg>
+                        </div>
+                        <div class="content-card__content">
+                            <h3 class="content-card__title">4. Layout Optimization</h3>
+                            <p class="content-card__text">Deploying CSS Grid for macro page structures and Flexbox for micro-alignments. This system guarantees responsive and clean alignment.</p>
+                        </div>
+                    </section>
+
+                    <!-- Card 5: Performance Optimization -->
+                    <section class="content-card">
+                        <div class="content-card__image-container">
+                            <svg class="content-card__svg" viewBox="0 0 200 120" aria-label="CLS Layout Stability Diagram">
+                                <rect width="100%" height="100%" fill="none"/>
+                                <rect x="25" y="15" width="150" height="50" rx="3" fill="#0d1222" stroke="#2563eb" stroke-width="1"/>
+                                <line x1="25" y1="15" x2="175" y2="65" stroke="#f97316" stroke-width="1" stroke-dasharray="4 4"/>
+                                <line x1="175" y1="15" x2="25" y2="65" stroke="#f97316" stroke-width="1" stroke-dasharray="4 4"/>
+                                <text x="100" y="35" fill="#f8fafc" font-size="10" font-family="monospace" text-anchor="middle">AVIF / WEBP</text>
+                                <text x="100" y="47" fill="#f97316" font-size="7" font-family="monospace" text-anchor="middle">width="800" height="600"</text>
+                                <text x="100" y="95" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">Cumulative Layout Shift (CLS) = 0</text>
+                            </svg>
+                        </div>
+                        <div class="content-card__content">
+                            <h3 class="content-card__title">5. Stability &amp; Media</h3>
+                            <p class="content-card__text">Employing optimized image formats (WebP/AVIF) paired with explicit dimensional attributes to eliminate Cumulative Layout Shift (CLS).</p>
+                        </div>
+                    </section>
+
+                    <!-- Card 6: Accessibility Standards -->
+                    <section class="content-card">
+                        <div class="content-card__image-container">
+                            <svg class="content-card__svg" viewBox="0 0 200 120" aria-label="Accessibility Alt Tags and Focus Ring illustration">
+                                <rect width="100%" height="100%" fill="none"/>
+                                <rect x="40" y="20" width="120" height="50" rx="4" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+                                <circle cx="100" cy="45" r="14" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+                                <line x1="100" y1="25" x2="100" y2="65" stroke="#3b82f6" stroke-width="1"/>
+                                <line x1="80" y1="45" x2="120" y2="45" stroke="#3b82f6" stroke-width="1"/>
+                                <rect x="40" y="20" width="120" height="50" rx="4" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="2 2"/>
+                                <text x="100" y="95" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">alt="Sitemap" | Tab-Index</text>
+                            </svg>
+                        </div>
+                        <div class="content-card__content">
+                            <h3 class="content-card__title">6. A11Y Standards</h3>
+                            <p class="content-card__text">Building accessible websites for screen readers and tab-keys. Employs strong contrast ratios (> 4.5:1) and descriptive label fields.</p>
+                        </div>
+                    </section>
+                </div>
+
+            </article>
+        </main>
+
+        <!-- ==========================================================================
+             FOOTER COMPONENT
+             ========================================================================== -->
+        <footer class="footer">
+            <div class="content-wrapper footer__container">
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <span class="footer__logo-icon">▲</span> DECODELABS
+                    </div>
+                    <p class="footer__description">Internal Engineering Track - Phase I Static Foundation.</p>
+                    <p class="footer__copyright">&copy; 2026 DECODELABS. All rights reserved.</p>
+                </div>
+                
+                <div class="footer__links-group">
+                    <h4 class="footer__heading">Quick Navigation</h4>
+                    <ul class="footer__links-list">
+                        <li><a href="page 1.html" class="footer__link">Home Foundation</a></li>
+                        <li><a href="page 2.html" class="footer__link">NAVACS Dashboard</a></li>
+                        <li><a href="page 3.html" class="footer__link">Links &amp; Resources</a></li>
+                        <li><a href="page 3.html#contact" class="footer__link">Contact Team</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__badges-group">
+                    <h4 class="footer__heading">Quality Badges</h4>
+                    <div class="footer__badges">
+                        <span class="footer__badge footer__badge--w3c">W3C HTML5 Valid</span>
+                        <span class="footer__badge footer__badge--css3">W3C CSS3 Valid</span>
+                        <span class="footer__badge footer__badge--a11y">WCAG 2.1 AA</span>
+                    </div>
+                    <div class="footer__contact-info">
+                        <p class="footer__contact-text">Inquiries: tech@decodelabs.internal</p>
+                        <p class="footer__contact-text">Location: Node 4, Core Grid</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
