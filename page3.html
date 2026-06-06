@@ -35,8 +35,8 @@
                     <ul class="header__menu">
                         <li><a href="index.html" class="header__link" id="nav-home">HOME</a></li>
                         <li><a href="page2.html" class="header__link" id="nav-navacs">NAVACS</a></li>
-                        <li><a href="page3.html" class="header__link header__link--active" id="nav-links">LINKS</a></li>
-                        <li><a href="page 3.html#contact" class="header__link" id="nav-contact">CONTACT</a></li>
+                        <li><a href="page3.html #contact_panel" class="header__link header__link--active" id="nav-links">LINKS</a></li>
+                        <li><a href="page3.html#contact" class="header__link" id="nav-contact">CONTACT</a></li>
                     </ul>
                 </nav>
                 
@@ -191,7 +191,7 @@
                         <li><a href="index.html" class="footer__link">Home Foundation</a></li>
                         <li><a href="page2.html" class="footer__link">NAVACS Dashboard</a></li>
                         <li><a href="page3.html" class="footer__link">Links &amp; Resources</a></li>
-                        <li><a href="#contact" class="footer__link">Contact Team</a></li>
+                        <li><a href="page3.html#contact" class="header__link" id="nav-contact">CONTACT</a></li>
                     </ul>
                 </div>
 
@@ -215,35 +215,7 @@
     <!-- ==========================================================================
          FORM SUBMISSION DYNAMIC INTERACTIVE SCRIPT
          ========================================================================== -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('audit-contact-form');
-            const successBox = document.getElementById('form-success-box');
-            const submitBtn = document.getElementById('submit-audit-btn');
 
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                // Basic HTML5 validation pass check
-                if (!form.checkValidity()) {
-                    return;
-                }
-
-                submitBtn.innerText = "SUBMITTING TICKET...";
-                submitBtn.disabled = true;
-
-                setTimeout(() => {
-                    successBox.style.display = 'flex';
-                    form.reset();
-                    submitBtn.innerText = "SUBMIT AUDIT REQUEST";
-                    submitBtn.disabled = false;
-                    
-                    // Smooth scroll up to success box
-                    successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, 1000);
-            });
-        });
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
